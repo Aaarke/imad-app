@@ -11,7 +11,7 @@ date:'Sep 1 ,2017',
 content:`<div>
 <p>
 This is the content for my html page.
-Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. 
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack.
 </p>
 <p>
 This is the content for my html page.
