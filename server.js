@@ -4,23 +4,76 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
+var AritcleOne = {
+  title:'Article-one | Roshan Kumar',
+  heading:'Article-one',
+  date:'Sep 1 ,2017',
+  content:`<div>
+          <p>
+          This is the content for my html page.
+          Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. In a short period of time, six of the seven formerly independent kingdoms had surrendered to the Targaryen leader, King Aegon I, unifying the continent under his rule. The last hold-out, Dorne, joined the kingdom through a political and marriage alliance some two centuries later.
+          </p>
+           <p>
+          This is the content for my html page.
+          Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. In a short period of time, six of the seven formerly independent kingdoms had surrendered to the Targaryen leader, King Aegon I, unifying the continent under his rule. The last hold-out, Dorne, joined the kingdom through a political and marriage alliance some two centuries later.
+          </p>
+           <p>
+          This is the content for my html page.
+          Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. In a short period of time, six of the seven formerly independent kingdoms had surrendered to the Targaryen leader, King Aegon I, unifying the continent under his rule. The last hold-out, Dorne, joined the kingdom through a political and marriage alliance some two centuries later.
+          </p>
+           <p>
+          This is the content for my html page.Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. In a short period of time, six of the seven formerly independent kingdoms had surrendered to the Targaryen leader, King Aegon I, unifying the continent under his rule. The last hold-out, Dorne, joined the kingdom through a political and marriage alliance some two centuries later.
+          </p>
+           <p>
+          This is the content for my html page.
+          Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. In a short period of time, six of the seven formerly independent kingdoms had surrendered to the Targaryen leader, King Aegon I, unifying the continent under his rule. The last hold-out, Dorne, joined the kingdom through a political and marriage alliance some two centuries later.
+          </p>
+           <p>
+          This is the content for my html page.
+          Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, the Targaryens were given control of the island of Dragonstone in the Narrow Sea some centuries ago. After the obliteration of Valyria in the Doom, the Targaryens launched a devastating invasion of Westeros using three dragons to spearhead their attack. In a short period of time, six of the seven formerly independent kingdoms had surrendered to the Targaryen leader, King Aegon I, unifying the continent under his rule. The last hold-out, Dorne, joined the kingdom through a political and marriage alliance some two centuries later.
+          </p>
 
+      </div>
+      `
+};
+function creatTemplate(data){
+  var title= data.title;
+  var date= data.date;
+  var heading =data.heading;
+  var content=data.content;
+var htmlTeamplate=`<html>
+  <head>
+      <title>
+          ${title}
+      </title>
+  </head>
+  <body>
+      <div>
+    <a href="/">HOME"</a>
+      </div>
+      <hr/>
+      <h3>
+      ${heading}
+      </h3>
+      <div>
+          ${date}
+      </div>
+      <div>
+      ${content}
+          </div>
+  </body>
+
+
+</html>
+`;
+return htmlTeamplate;
+}
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-
 app.get('/Article-one', function (req, res) {
-res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+  res.send(creatTemplate(Article-one));
 });
-app.get('/article-two', function (req, res) {
-  res.send('Article2 requested and will be served here');
-});
-app.get('/article-three', function (req, res) {
-  res.send('Article3 requested and will be served here');
-});
-
-
-
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
