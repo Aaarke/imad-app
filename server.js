@@ -38,7 +38,7 @@ Once a noble family of the vast Valyrian Freehold, an empire spanning most of th
 `
 },
 'article-two':{title:'Article-Two | Roshan Kumar',
-heading:'Article-one',
+heading:'Article-two',
 date:'Sep 10 ,2017',
 content:`<div>
 <p>
@@ -69,7 +69,7 @@ Once a noble family of the vast Valyrian Freehold, an empire spanning most of th
 `
 },
 'article-three':{title:'Article-Three | Roshan Kumar',
-heading:'Article-one',
+heading:'Article-Three',
 date:'Sep 10 ,2017',
 content:`<div>
 <p>
