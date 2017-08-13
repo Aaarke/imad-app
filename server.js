@@ -5,7 +5,7 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 var articles={
-ArticleOne : {
+'article-one' : {
 title:'Article-one | Roshan Kumar',
 heading:'Article-one',
 date:'Sep 1 ,2017',
@@ -37,7 +37,7 @@ Once a noble family of the vast Valyrian Freehold, an empire spanning most of th
 </div>
 `
 },
-ArticleTwo:{title:'Article-Two | Roshan Kumar',
+'article-two':{title:'Article-Two | Roshan Kumar',
 heading:'Article-one',
 date:'Sep 10 ,2017',
 content:`<div>
@@ -68,7 +68,7 @@ Once a noble family of the vast Valyrian Freehold, an empire spanning most of th
 </div>
 `
 },
-ArticleThree:{title:'Article-Three | Roshan Kumar',
+'article-three':{title:'Article-Three | Roshan Kumar',
 heading:'Article-one',
 date:'Sep 10 ,2017',
 content:`<div>
@@ -135,7 +135,8 @@ app.get('/', function (req, res) {
 res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 app.get('/:articleName', function (req, res) {
-res.send(creatTemplate(ArticleOne));
+    articleName=req.params.articleName;
+res.send(creatTemplate(articles[articleName]));
 });
 
 app.get('/ui/style.css', function (req, res) {
