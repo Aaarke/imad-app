@@ -106,6 +106,7 @@ var content=data.content;
 var htmlTeamplate=`
 <html>
 <head>
+ <link href="/ui/style.css" rel="stylesheet" />
 <title>
 ${title}
 </title>
