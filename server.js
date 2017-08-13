@@ -4,7 +4,8 @@ var path = require('path');
 
 var app = express();
 app.use(morgan('combined'));
-var ArticleOne = {
+var articles={
+ArticleOne : {
 title:'Article-one | Roshan Kumar',
 heading:'Article-one',
 date:'Sep 1 ,2017',
@@ -35,15 +36,76 @@ Once a noble family of the vast Valyrian Freehold, an empire spanning most of th
 
 </div>
 `
+},
+ArticleTwo:{title:'Article-Two | Roshan Kumar',
+heading:'Article-one',
+date:'Sep 10 ,2017',
+content:`<div>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent.
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, 
+</p>
+
+</div>
+`
+},
+ArticleThree:{title:'Article-Three | Roshan Kumar',
+heading:'Article-one',
+date:'Sep 10 ,2017',
+content:`<div>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent.
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent,
+</p>
+<p>
+This is the content for my html page.
+Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, 
+</p>
+
+</div>}
 };
 function creatTemplate(data){
 var title= data.title;
 var date= data.date;
 var heading =data.heading;
 var content=data.content;
-var htmlTeamplate=`<html>
+var htmlTeamplate=`
+<html>
 <head>
-<link href="/ui/style.css" rel="stylesheet" />
 <title>
 ${title}
 </title>
