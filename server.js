@@ -96,7 +96,7 @@ This is the content for my html page.
 Once a noble family of the vast Valyrian Freehold, an empire spanning most of the eastern continent, 
 </p>
 
-</div>}
+</div>}`}
 };
 function creatTemplate(data){
 var title= data.title;
