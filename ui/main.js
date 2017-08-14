@@ -11,7 +11,7 @@ button.onclick = function (){
         }
         
     };
-    request.open('GET','https://imad.hasura.io/counter',true);
+    request.open('GET','https://roshankuamrroshi@gmail.com.imad.hasura.io/counter',true);
     request.send(null);
     
 };
