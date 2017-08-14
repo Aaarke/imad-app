@@ -13,7 +13,7 @@ button.onclick = function (){
         }
         
     };
-    request.open('GET','http://roshankumarroshi.imad.hasura-app.io/counter',true);
+    request.open('GET','http://roshankumarroshi@gmail.com.imad.hasura-app.io/counter',true);
     request.send(null);
     
 };
