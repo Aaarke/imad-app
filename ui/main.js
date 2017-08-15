@@ -1,8 +1,7 @@
-var button= document.getElementById('counter');
+
 
 //submit name
-var nameInput=document.getElementById('name');
-var name=nameInput.value;
+
 var submit=document.getElementById('submit-btn');
 submit.onclick=function(){
     //create a request object
@@ -26,6 +25,8 @@ ul.innerHTML=list;
         }
     }
 };
+var nameInput=document.getElementById('name');
+var name=nameInput.value;
 
 request.open('GET','http://roshankumarroshi.imad.hasura-app.io/sunmit-name?name='+name,true);
 request.send(null);
